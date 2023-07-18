@@ -33,7 +33,6 @@ public class TesteDatabaseApplication implements CommandLineRunner {
         cursoRepository.save(curso3);
         cursoRepository.save(curso4);
 
-
 //        curso1.setNome("Tec. Inf.");
 //        cursoRepository.save(curso1);
 
@@ -72,9 +71,12 @@ public class TesteDatabaseApplication implements CommandLineRunner {
 //        List<String> cursosPorNomeAreaQueryInformada = cursoRepository.findByQueryAreaInformada("Humanas","Prod. Pub.");
 //        cursosPorNomeAreaQueryInformada.forEach(curso -> System.out.println(curso));
 
-        List<String> cursosPorNomeAreaQueryInformada = cursoRepository.findByQueryAreaParametros("Humanas","Prod. Pub.");
-        cursosPorNomeAreaQueryInformada.forEach(curso -> System.out.println(curso));
+//        List<String> cursosPorNomeAreaQueryInformada = cursoRepository.findByQueryAreaParametros("Humanas","Prod. Pub.");
+//        cursosPorNomeAreaQueryInformada.forEach(curso -> System.out.println(curso));
 
+        Thread.sleep(3000);
+        curso2.setNome("Prod. Publi.");
+        cursoRepository.save(curso2);
 
     }
 }

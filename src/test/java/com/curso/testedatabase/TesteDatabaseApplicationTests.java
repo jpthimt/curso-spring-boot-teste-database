@@ -1,13 +1,13 @@
-package com.curso;
+package com.curso.testedatabase;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CursoUdemyApplicationTests {
+class TesteDatabaseApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

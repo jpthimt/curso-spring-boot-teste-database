@@ -37,7 +37,7 @@ public class Curso {
     @Transient
     private BigDecimal valorDoCurso;
 
-    @OneToMany
+    @OneToMany(mappedBy = "curso")
     private List<Aluno> alunos = new ArrayList<>();
 
     @PostPersist
@@ -104,6 +104,22 @@ public class Curso {
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
+    }
+
+    public BigDecimal getValorDoCurso() {
+        return valorDoCurso;
+    }
+
+    public void setValorDoCurso(BigDecimal valorDoCurso) {
+        this.valorDoCurso = valorDoCurso;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 
     @Override

@@ -12,9 +12,15 @@ public class Aluno {
     private String nome;
 
     @ManyToOne
+    @JoinColumn(name = "curso_id")
     private Curso curso;
 
     public Aluno() {
+    }
+
+    public Aluno(String nome, Curso curso) {
+        this.nome = nome;
+        this.curso = curso;
     }
 
     public Integer getId() {
@@ -31,5 +37,13 @@ public class Aluno {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 }
